@@ -35,10 +35,10 @@ class SideMenu extends Component{
           formateDate: 'yyyy/mm/dd'
         });
       }
-      return data
       catch (e) {
         console.log(e);
       }
+      return data
     })
   }
 
