@@ -132,7 +132,7 @@ class Dashboard extends Component{
           </select>
           <input type='text' class='url-placer' id='url-placer'/>
           <button onClick={this.runRequest}><img src={Send} style={{width:'70%'}} alt='send'/></button>
-          <button style={{borderRadius:5, marginLeft:10}} onClick={this.newRequest}><img src={Save} style={{width:'70%'}} a;t='save'/></button>
+          <button style={{borderRadius:5, marginLeft:10}} onClick={this.newRequest}><img src={Save} style={{width:'70%'}} alt='save'/></button>
         </div>
         <div>
           <Parameters/>
