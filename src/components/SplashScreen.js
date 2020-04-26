@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import '../stylesheets/dashboard.css'
-import FullScreen from '../images/full-screen.png'
 import '../stylesheets/loader.css'
 
 class SplashScreen extends Component{

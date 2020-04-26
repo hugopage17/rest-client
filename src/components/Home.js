@@ -49,11 +49,7 @@ class Home extends Component{
   render(){
     return(
       <div>
-        <div class='home-nav'>
-          <a>Home</a>
-          <a>News</a>
-          <a>Contact</a>
-        </div>
+        <h1>Rest Client</h1>
         <div class='social-logins'>
           <GoogleLoginButton onClick={this.signupGoogle} style={{marginBottom:20}}/>
           <GithubLoginButton onClick={this.signupGithub} style={{marginBottom:20}}/>

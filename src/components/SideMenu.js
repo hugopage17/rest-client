@@ -25,7 +25,7 @@ class SideMenu extends Component{
     fire.database().ref(id+'/'+exporting).once('value').then((snapshot)=>{
       const snap = snapshot.val()
       var data = []
-      Object.keys(snap).map((key, index)=> {
+      Object.keys(snap).map(function(key, index){
         data.push(snap[key])
       })
       try {

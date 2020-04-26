@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import '../stylesheets/sidemenu.css'
-import FullScreen from '../images/full-screen.png'
 import {setBody} from '../actions/dataActions.js'
 import {connect} from 'react-redux'
 

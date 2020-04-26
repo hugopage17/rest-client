@@ -103,6 +103,7 @@ class Dashboard extends Component{
       const name = head.name
       const value = head.value
       headers[name] = value
+      return head
     })
     var requestObject = {
       url:url,
@@ -130,8 +131,8 @@ class Dashboard extends Component{
             <option value='delete'>Delete</option>
           </select>
           <input type='text' class='url-placer' id='url-placer'/>
-          <button onClick={this.runRequest}><img src={Send} style={{width:'70%'}}/></button>
-          <button style={{borderRadius:5, marginLeft:10}} onClick={this.newRequest}><img src={Save} style={{width:'70%'}}/></button>
+          <button onClick={this.runRequest}><img src={Send} style={{width:'70%'}} alt='send'/></button>
+          <button style={{borderRadius:5, marginLeft:10}} onClick={this.newRequest}><img src={Save} style={{width:'70%'}} a;t='save'/></button>
         </div>
         <div>
           <Parameters/>

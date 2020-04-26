@@ -25,7 +25,7 @@ class SavingPanel extends Component{
   render(){
     return(
       <div class='middle-panel-wrapper'>
-        <img src={Close} onClick={this.props.close} style={{cursor:'pointer'}}/>
+        <img src={Close} onClick={this.props.close} style={{cursor:'pointer'}} alt='close'/>
         <div class='saving-panel' style={{backgroundColor:'white',padding:40,textAlign:'center',borderRadius:5}}>
           <label>Name</label>
           <input type='text' class='req-name' id='req-name'/><br/>
