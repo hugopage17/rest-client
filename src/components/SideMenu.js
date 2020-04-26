@@ -27,6 +27,7 @@ class SideMenu extends Component{
       var data = []
       Object.keys(snap).map(function(key, index){
         data.push(snap[key])
+        return snap[key]
       })
       try {
         json2excel({
