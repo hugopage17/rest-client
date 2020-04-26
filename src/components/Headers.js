@@ -51,11 +51,9 @@ class Headers extends Component{
     return this.state.headerNum.map((header)=>{
       const index = this.state.headerNum.indexOf(header)
       var setHeaderName = (e) => {
-        this.state.headerNum[index].name = e.target.value
         this.props.setHeaders(this.state.headerNum)
       }
       var setHeaderValue = (e) => {
-        this.state.headerNum[index].value = e.target.value
         this.props.setHeaders(this.state.headerNum)
       }
       return(
@@ -63,7 +61,7 @@ class Headers extends Component{
           <label style={{marginRight:10,color:'#696969'}}>{index+1}</label>
           <input type='text' placeholder='name' class='header-name' style={inputStyle} name='name' onChange={setHeaderName} list="name-data"/>
           <input type='text' placeholder='value' class='header-value' style={inputStyle} name='value' onChange={setHeaderValue} list='value-data'/>
-          <img src={Delete} onClick={this.deleteHeader.bind(this, index)} style={{cursor:'pointer'}}/>
+          <img src={Delete} onClick={this.deleteHeader.bind(this, index)} style={{cursor:'pointer'}} alt='delete'/>
           <datalist id="name-data">{headerNames.map((name)=>{return(<option value={name}/>)})}</datalist>
           <datalist id="value-data">{headerValues.map((name)=>{return(<option value={name}/>)})}</datalist>
         </div>

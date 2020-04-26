@@ -88,7 +88,7 @@ class History extends Component{
             </div>
             <div>
               <label style={{marginTop:10, color:'white',cursor:'pointer'}} class='his-url'>{url}</label>
-              <img src={Delete} style={{cursor:'pointer', float:'right'}} onClick={this.delete.bind(this, his.id)}/>
+              <img src={Delete} style={{cursor:'pointer', float:'right'}} onClick={this.delete.bind(this, his.id)} alt='delete'/>
             </div>
           </div>
         )
