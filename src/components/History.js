@@ -56,25 +56,25 @@ class History extends Component{
         const his = history[key]
         let color
         let resColor
-        if(his.method ==== 'GET'){
+        if(his.method === 'GET'){
           color = '#00ff1a'
         }
-        else if (his.method ==== 'POST'){
+        else if (his.method === 'POST'){
           color = '#00c5db'
         }
-        else if (his.method ==== 'DELETE'){
+        else if (his.method === 'DELETE'){
           color = '#ff0000'
         }
-        else if (his.method ==== 'PATCH'){
+        else if (his.method === 'PATCH'){
           color = '#ffc400'
         }
-        if(his.status ==== 200){
+        if(his.status === 200){
           resColor = '#00ff1a'
         }
-        else if(his.status ==== 201){
+        else if(his.status === 201){
           resColor = '#00c5db'
         }
-        else if(his.status ==== 404){
+        else if(his.status === 404){
           resColor = '#ff0000'
         }
         const url = his.url.slice(0, 26)+'......'
