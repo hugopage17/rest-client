@@ -1,22 +1,101 @@
-.App {
-  text-align: center;
+button{
+  cursor: pointer;
 }
 
-.App-logo {
-  height: 40vmin;
+.navbar {
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  box-shadow: 0 4px 2px -2px #00c5db;
+  padding:5px;
+  background-color:white;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+::-webkit-scrollbar {
+  width: 10px;
 }
 
-.App-link {
-  color: #09d3ac;
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #00c5db;
+  border-radius: 10px;
+}
+
+.profile-pic{
+  border-radius: 100px;
+  width:10%;
+}
+
+.loading-wrapper{
+  position:fixed;
+  top:0;
+  left:0;
+  background:rgb(36,36,36);
+  z-index:5;
+  width:100%;
+  height:100%;
+}
+
+.loading-panel{
+  background-color:rgb(36,36,36);
+  position: fixed;
+  top: 10%;
+  left: 35%;
+  right:35%;
+  border-radius: 5px;
+  box-shadow: 3px 3px 8px #00c5db;
+}
+
+i {
+  border: solid black;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+}
+
+.down {
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  padding: 12px 16px;
+  z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.social-logins{
+  width:20%;
+  margin:auto;
+  box-shadow: 0px 4px 8px 0px rgba(0,0,0,0.4);
+  padding: 10px;
+  border-radius: 5px;
+  border:1px solid #a6a6a6;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    transition: background-color 5000s ease-in-out 0s;
+    -webkit-background-fill-color: white !important;
+    -webkit-outline:none;
 }
