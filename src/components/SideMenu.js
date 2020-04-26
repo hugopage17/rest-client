@@ -17,18 +17,14 @@ class SideMenu extends Component{
 
   export = () => {
     let exporting
-    if(this.state.saved == true){
+    if(this.state.saved === true){
       exporting = 'savedRequests'
     }else{exporting = 'history'}
     const user = fire.auth().currentUser
     const id = user.uid
-    var element = document.createElement("a");
-    var all_data = []
-    var date = new Date()
     fire.database().ref(id+'/'+exporting).once('value').then((snapshot)=>{
       const snap = snapshot.val()
       var data = []
-      const file = Date.now()
       Object.keys(snap).map((key, index)=> {
         data.push(snap[key])
       })
@@ -39,6 +35,7 @@ class SideMenu extends Component{
           formateDate: 'yyyy/mm/dd'
         });
       }
+      return data
       catch (e) {
         console.log(e);
       }
@@ -47,7 +44,7 @@ class SideMenu extends Component{
 
   deleteAll = () => {
     const user = fire.auth().currentUser
-    if(this.state.saved == true){
+    if(this.state.saved === true){
       fire.database().ref().child(user.uid).update({savedRequests:0})
     }else{
       fire.database().ref().child(user.uid).update({history:0})
@@ -57,11 +54,11 @@ class SideMenu extends Component{
   render(){
     let activeSaved
     let activeHistory
-    if(this.state.saved == true){
+    if(this.state.saved === true){
       activeSaved = '0 4px 2px -2px #00c5db'
       activeHistory = null
     }
-    else if(this.state.saved == false){
+    else if(this.state.saved === false){
       activeHistory = '0 4px 2px -2px #00c5db'
       activeSaved = null
     }
@@ -77,8 +74,8 @@ class SideMenu extends Component{
           {this.state.saved ? (<SavedRequests/>):(<History/>)}
         </div>
         <div class='menu-bottom'>
-          <button onClick={this.export} style={{borderRight:'1px solid #828282'}}>Export <img src={Export}/></button>
-          <button onClick={this.deleteAll}>Delete All <img src={Delete}/></button>
+          <button onClick={this.export} style={{borderRight:'1px solid #828282'}}>Export <img src={Export} alt='export'/></button>
+          <button onClick={this.deleteAll}>Delete All <img src={Delete} alt='delete'/></button>
         </div>
       </div>
     )

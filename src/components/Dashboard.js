@@ -36,13 +36,11 @@ class Dashboard extends Component{
       }
       catch(err){}
     }, 50)
-    const user = fire.auth().currentUser
   }
 
   runRequest = () => {
     const url = document.getElementById('url-placer').value
     const method = document.getElementById('request-type').value
-    let start_time = new Date().getTime();
     let statusCode
     let statusText
     const user = this.props.user
@@ -53,6 +51,7 @@ class Dashboard extends Component{
       const name = head.name
       const value = head.value
       headers[name] = value
+      return head
     })
     fetch(url, {
       method:method,

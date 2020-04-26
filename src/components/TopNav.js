@@ -23,7 +23,7 @@ class TopNav extends Component{
     return(
       <div class='navbar'>
         <div style={{float:'right', marginRight:60, display:'flex', alignItems:'center', cursor:'pointer'}} class='dropdown'>
-          <img src={user.photoURL} class='profile-pic' style={{marginRight:10}}/>
+          <img src={user.photoURL} class='profile-pic' style={{marginRight:10}} alt='display photo'/>
           <label>{user.displayName}  <i class="arrow down"></i></label>
           <div class="dropdown-content">
             <p>Settings</p>

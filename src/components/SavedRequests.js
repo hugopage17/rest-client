@@ -19,7 +19,7 @@ class SavedRequests extends Component{
       try{
         fire.database().ref(id+'/savedRequests').on('value', (snap) => {
           const requests = snap.val()
-          if(requests == 0 || requests == null){
+          if(requests === 0 || requests === null){
             this.setState({requests:{}})
           }
           else{
@@ -62,11 +62,10 @@ class SavedRequests extends Component{
         const req = requests[key]
         let color
         let resColor
-        if(req.method == 'GET'){color = '#00ff1a'}
-        else if (req.method == 'POST'){color = '#00c5db'}
-        else if (req.method == 'DELETE'){color = '#ff0000'}
-        else if (req.method == 'PATCH'){color = '#ffc400'}
-        const url = req.url.slice(0, 26)+'......'
+        if(req.method === 'GET'){color = '#00ff1a'}
+        else if (req.method === 'POST'){color = '#00c5db'}
+        else if (req.method === 'DELETE'){color = '#ff0000'}
+        else if (req.method === 'PATCH'){color = '#ffc400'}
         return(
           <div style={style.main}>
             <div style={style.left}>
@@ -77,7 +76,7 @@ class SavedRequests extends Component{
             </div>
             <div>
               <label style={{marginTop:10, color:'white',cursor:'pointer'}}>{req.name}</label>
-              <img src={Delete} style={{cursor:'pointer', float:'right'}} onClick={this.delete.bind(this, req.name)}/>
+              <img src={Delete} style={{cursor:'pointer', float:'right'}} onClick={this.delete.bind(this, req.name)} alt='delete'/>
             </div>
           </div>
         )

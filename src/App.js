@@ -1,5 +1,4 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 import fire from './Fire.js'
 import TopNav from './components/TopNav.js'
