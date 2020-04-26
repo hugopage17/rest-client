@@ -19,7 +19,6 @@ class App extends React.Component{
   }
 
   componentDidMount(){
-    alert('New Push')
     this.authListener()
     setTimeout(()=>{
       this.setState({loading:false})
